@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+  <!-- Balises de référencement -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Découvrez notre page dédié à la filmographie londonienne et notamment Harry Potter.">
+  <meta name="author" content="Selyan Mouhali">
+  <meta name="keywords" content="londres, uk, film, harry, potter, making-off, soricer">
+
+  <!-- Titre de la page -->
+	<title>Un peu de magie</title>
+
+  <!--Favicon-->
+  <link rel="icon" href="../img/favicon_harry_potter.png" type="image/png">
+
+  <!--Import des fichiers CSS-->
+  <link rel="stylesheet" href="../style/style.css"/>
+
+  <!-- Police : Roboto -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <!-- Police : Bebas -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="header-container">
+
+      <!-- Bouton burger -->
+    
+      <div class="menu-header">
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+          <span class="burger-icon">☰</span>
+      </button>
+      <h1 class="hide">Focus sur Harry Potter</h1>
+      </div>
+
+      <!-- Barre de navigation -->
+
+      <nav class="nav-bar" id="nav-bar">
+
+        <a href="../index.html" class="active">ACCUEIL</a>
+        
+        <div class="dropdown">
+            <button class="dropbtn">CULTURE</button>
+            <div class="dropdown-content">
+            <a href="food.html">Gastronomie</a>
+            <a href="film.html">Filmographie</a>
+            <a href="music.html">Discographie</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">URBANISME</button>
+            <div class="dropdown-content">
+            <a href="noskip.html">Incontournables</a>
+            <a href="quartiers1.html">Quartiers thématiques</a>
+            <a href="quartiers2.html">Quartiers "undergrounds"</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">TOURISME</button>
+            <div class="dropdown-content">
+            <a href="musee.html">Musées</a>
+            <a href="shop.html">Shopping</a>
+            <a href="cars.html">Automobile</a>
+            <a href="foot.html">Football</a>
+            </div>
+        </div>
+
+        <a href="contact.html">CONTACT</a>
+        <a href="quiz.html">QUIZ</a>
+      </nav>
+      
+    </div>
+
+    <!-- Section avec le texte, l'image et le bouton cliquable -->
+
+    <div class="max-width">
+      <div class="highlight">
+        <img src="../img/leadenhall_market.jpg" class="image-hover" alt="Leadenhall Market">
+        <div class="text-box">
+          <h2>Leadenhall Market</h2>
+          <p>
+            Situé dans la City de Londres, Leadenhall Market est l’un des plus anciens marchés couverts de la capitale, avec son architecture victorienne magnifique et ses allées pavées. Mais ce lieu ne séduit pas seulement par son charme historique… <br><br>
+            Les fans de Harry Potter le reconnaîtront comme l’un des lieux de tournage du Chemin de Traverse ! C’est ici, sous ces arcades colorées, que furent tournées plusieurs scènes emblématiques du premier film, notamment l’entrée du magasin d’accessoires magiques. L’entrée du Chaudron Baveur a également été filmée dans une petite ruelle attenante au marché.<br><br>
+            Que vous soyez sorcier dans l’âme ou simple amateur de lieux insolites, Leadenhall Market vous transporte aussitôt dans l’univers magique de J.K. Rowling.
+          </p>
+          <a href="https://www.google.com/maps/place/March%C3%A9+de+Leadenhall/@51.512766,-0.0861038,1423m/data=!3m3!1e3!4b1!5s0x487617bd97e73bcd:0x4d93aca1ee39397e!4m6!3m5!1s0x487603528c761b51:0x2ab521a67e1111b3!8m2!3d51.512766!4d-0.0835289!16zL20vMDN3ZHlo?entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoASAFQAw%3D%3D" target="_blank" class="button">Cliquez pour vous y rendre</a>
+        </div>
+      </div>
+
+      <!-- Section avec les 2 images côte à côte -->
+
+      <div class="locations">
+        <div class="card-film">
+          <div class="image-block">
+            <img src="../img/millenium_bridge_2.jpeg" class="image-hover" alt="Millenium Bridge">
+            <p>Millenium Bridge</p>
+          </div>
+        
+          <div class="image-block">
+            <img src="../img/king_cross_station.jpg" class="image-hover" alt="King Cross Station">
+            <p>King Cross Station</p>
+          </div>
+        </div>
+        
+      </div>
+
+      <!-- Section sur la vidéo avec le making off -->
+
+      <div class="video-section">
+        <p class="quote">"Une vidéo parle mieux que mille mots."</p>
+        <div class="video-container">
+          <video controls poster="../img/poster_making_of.png">
+            <source src="../video/making_of.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la lecture vidéo.
+          </video>
+        </div>
+      </div>
+    
+    </div>
+
+    <!-- Javascript - généré par l'IA -->
+    
+    <script>
+        
+        // Pour l'affichage du menu burger
+
+            const toggleBtn = document.getElementById('nav-toggle');
+            const navBar = document.getElementById('nav-bar');
+            const icon = toggleBtn.querySelector('.burger-icon');
+
+            toggleBtn.addEventListener('click', () => {
+            navBar.classList.toggle('active');
+            icon.textContent = navBar.classList.contains('active') ? '✖' : '☰';
+            });
+
+            // Sélectionne tous les liens et boutons dans la nav
+        const navItems = document.querySelectorAll('.nav-bar a, .nav-bar .dropbtn');
+
+        navItems.forEach(item => {
+            item.addEventListener('click', () => {
+            // Retire la classe 'selected' de tous les items
+            navItems.forEach(el => el.classList.remove('selected'));
+            // Ajoute la classe 'selected' à l'élément cliqué
+            item.classList.add('selected');
+            });
+        });
+
+    </script>
+
+
+    <!-- Pied de page avec les réseaux et le mail cliquable du développeur -->
+
+    <footer class="max-width">
+        <p> 
+            <a href="mailto:selyan.mouhali@utt.fr">Selyan Mouhali</a> © 2025 - Londres - All rights reserved -
+
+            <a href="https://www.instagram.com/selyan_mhli" target="_blank" title="Instagram">
+                <img src="../img/insta.png" alt="Instagram">
+            </a>
+            <a href="https://www.linkedin.com/in/selyanmouhali" target="_blank" title="LinkedIn">
+                <img src="../img/linkedin.png" alt="LinkedIn">
+            </a>
+        </p>
+        
+    </footer>
+
+</body>
+
+
+
+  

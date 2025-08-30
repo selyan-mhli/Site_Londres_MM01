@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+  <!-- Balises de référencement -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Découvrez notre page sur les musées londoniens, de la National Gallery à la Tate Gallery. Explorez l'art classique et contemporain dans ces institutions emblématiques.">
+  <meta name="author" content="Selyan Mouhali">
+  <meta name="keywords" content="londres, uk, culture, peinture, musées, picasso, van gogh">
+  
+  <!-- Titre de la page -->
+  <title>Musées</title>
+	
+  <!--Favicon-->
+  <link rel="icon" href="../img/favicon_musee.png" type="image/png">
+
+  <!--Import des fichiers CSS-->
+  <link rel="stylesheet" href="../style/style.css"/>
+
+  <!-- Police : Roboto -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <!-- Police : Bebas -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div class="header-container">
+
+    <!-- Bouton burger -->
+    
+      <div class="menu-header">
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+        <span class="burger-icon">☰</span>
+      </button>
+      <h1 class="hide">Musées</h1>
+      </div>
+
+    <!-- Barre de navigation -->
+
+    <nav class="nav-bar" id="nav-bar">
+
+      <a href="../index.html" class="active">ACCUEIL</a>
+      
+      <div class="dropdown">
+          <button class="dropbtn">CULTURE</button>
+          <div class="dropdown-content">
+          <a href="food.html">Gastronomie</a>
+          <a href="film.html">Filmographie</a>
+          <a href="music.html">Discographie</a>
+          </div>
+      </div>
+
+      <div class="dropdown">
+          <button class="dropbtn">URBANISME</button>
+          <div class="dropdown-content">
+          <a href="noskip.html">Incontournables</a>
+          <a href="quartiers1.html">Quartiers thématiques</a>
+          <a href="quartiers2.html">Quartiers "undergrounds"</a>
+          </div>
+      </div>
+
+      <div class="dropdown">
+          <button class="dropbtn">TOURISME</button>
+          <div class="dropdown-content">
+          <a href="musee.html">Musées</a>
+          <a href="shop.html">Shopping</a>
+          <a href="cars.html">Automobile</a>
+          <a href="foot.html">Football</a>
+          </div>
+      </div>
+
+      <a href="contact.html">CONTACT</a>
+      <a href="quiz.html">QUIZ</a>
+    </nav>
+
+    
+  
+  </div>
+
+  <div class="max-width">
+
+    <!-- Section sur les 2 musées-->
+		<section class="museum-section">
+      
+      <!-- 1e musée : National Gallery -->
+			<div class="gallery">
+        <h2>National Gallery</h2>
+			  <div class="description">
+          La National Gallery, c’est le spot incontournable pour les fans d’art à Londres. Des œuvres mythiques de Van Gogh, Turner ou Léonard de Vinci, le tout en accès libre. Un voyage visuel au cœur de l’Europe classique, en plein Trafalgar Square.<br><br> 
+          <p>Cliquez sur les oeuvres pour en avoir une description détaillée.</p>
+        </div>
+				<div class="art-card" onclick="openModal('modal1')">
+					<img src="../img/claude_montet_water.jpg" alt="The Water Lily Pond">
+					<h3>The Water Lily Pond</h3>
+					<p>Claude Monet</p>
+				</div>
+				<div class="art-card" onclick="openModal('modal2')">
+					<img src="../img/van_gogh_vase.jpg" alt="Les Tournesols">
+					<h3>Les Tournesols</h3>
+					<p>Vincent Van Gogh</p>
+				</div>
+				<div class="art-card" onclick="openModal('modal3')">
+					<img src="../img/da_vinci_vierge.jpg" alt="La Vierge aux Rochers">
+					<h3>La Vierge aux Rochers</h3>
+					<p>Leonardo Da Vinci</p>
+				</div>
+			</div>
+
+		<!-- 2e musée : Tate Gallery -->
+    <div class="gallery">
+      <h2>Tate Gallery</h2>
+      <div class="description">
+        Tate Gallery, c’est le temple de l’art contemporain à Londres. Installée dans une ancienne centrale électrique, elle bouscule les codes avec des expos audacieuses, des installations géantes et une vue imprenable sur la Tamise. Un lieu vibrant, créatif et gratuit.<br><br>
+        <p>Cliquez sur les oeuvres pour en avoir une description détaillée.</p>
+      </div>
+      <div class="art-card" onclick="openModal('modal4')">
+        <img src="../img/marilyn_diptych_warhol.jpg" alt="Marilyn Diptych">
+        <h3>Marilyn Diptych</h3>
+        <p>Andy Warhol</p>
+      </div>
+      <div class="art-card" onclick="openModal('modal5')">
+        <img src="../img/wham_lichtenstein.jpeg" alt="Whaam!">
+        <h3>Whaam!</h3>
+        <p>Roy Lichtenstein</p>
+      </div>
+      <div class="art-card" onclick="openModal('modal6')">
+        <img src="../img/weeping_woman_picasso.jpg" alt="The Weeping Woman">
+        <h3>The Weeping Woman</h3>
+        <p>Pablo Picasso</p>
+      </div>
+    </div>
+		</section>
+	</div>
+
+  <!-- MODALES -->
+    <!-- MODAL 1 : Claude Monet -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal1')">&times;</span>
+        <div class="modal-left">
+          <img src="../img/monet_photo.jpg" alt="Claude Monet">
+          <p>Claude Monet, peintre impressionniste français, célèbre pour ses paysages flous et ses effets de lumière.</p>
+        </div>
+        <div class="modal-right">
+          <h2>The Water Lily Pond</h2>
+          <p>Ce chef-d'œuvre de l'impressionnisme fait partie de la série emblématique des Nymphéas que Monet a réalisée dans son jardin de Giverny. Le tableau représente un pont japonais enjambant un étang rempli de nénuphars. Par ses coups de pinceau délicats et sa palette douce, Monet parvient à capturer l’harmonie entre l’eau, la lumière et la végétation. Il ne s’agit pas d’une simple représentation réaliste, mais d’une méditation visuelle sur le temps, la nature et la perception. C’est aussi un exemple du tournant vers l’abstraction que prenait la peinture moderne.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL 2 : Vincent Van Gogh -->
+    <div id="modal2" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal2')">&times;</span>
+        <div class="modal-left">
+          <img src="../img/van_gogh_photo.jpg" alt="Vincent Van Gogh">
+          <p>Vincent Van Gogh, peintre néerlandais postimpressionniste, connu pour ses couleurs vives et sa touche expressive.</p>
+        </div>
+        <div class="modal-right">
+          <h2>Les Tournesols</h2>
+          <p>Cette toile fait partie d’une série de sept tableaux peints à Arles en 1888-1889. Van Gogh y explore la symbolique du tournesol, fleur de lumière et de vie, mais aussi de fragilité. L’usage de jaunes vifs, presque monochromes, révèle sa recherche sur la couleur pure et l’émotion brute. Les coups de pinceau en spirale, tourmentés et expressifs, témoignent de la personnalité intense du peintre. « Les Tournesols » sont devenus une icône universelle de l’art moderne, incarnant à la fois la beauté, la solitude et l’éphémère.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL 3 : Leonardo Da Vinci -->
+    <div id="modal3" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal3')">&times;</span>
+        <div class="modal-left">
+          <img src="../img/da_vinci_photo.jpg" alt="Leonardo Da Vinci">
+          <p>Leonardo Da Vinci, génie de la Renaissance, célèbre pour ses recherches scientifiques et ses peintures iconiques.</p>
+        </div>
+        <div class="modal-right">
+          <h2>La Vierge aux Rochers</h2>
+          <p>Cette œuvre existe en deux versions (Louvre et National Gallery), toutes deux attribuées à Léonard. Elle représente la Vierge Marie, l’enfant Jésus, Jean-Baptiste enfant et un ange, dans une grotte rocheuse. La composition en pyramide, le sfumato (effet vaporeux) et l’usage du clair-obscur traduisent parfaitement le style de Léonard. Il ne s'agit pas seulement d'une scène religieuse, mais d'une réflexion sur la nature, la maternité et la divinité, inscrite dans une atmosphère mystérieuse. C’est l’une des œuvres les plus énigmatiques et poétiques de la Renaissance italienne.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL 4 : Andy Warhol -->
+    <div id="modal4" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal4')">&times;</span>
+        <div class="modal-left">
+          <img src="../img/andy_warhol_photo.jpeg" alt="Andy Warhol">
+          <p>Andy Warhol, figure emblématique du pop art, explorait la culture de masse et l’iconographie des célébrités.</p>
+        </div>
+        <div class="modal-right">
+          <h2>Marilyn Diptych</h2>
+          <p>Créé en 1962 après la mort de Marilyn Monroe, ce diptyque utilise la technique de la sérigraphie pour reproduire cinquante fois le même portrait de l'actrice. La moitié gauche est en couleur, vive et éclatante, tandis que la moitié droite est en noir et blanc, plus fantomatique. Warhol y interroge la société de consommation, le culte de la célébrité et la mort. Répétition, saturation, effacement progressif : autant d’éléments qui donnent à l’image de Marilyn une dimension tragique sous ses apparences glamour.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL 5 : Roy Lichtenstein -->
+    <div id="modal5" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal5')">&times;</span>
+        <div class="modal-left">
+          <img src="../img/roy_photo.jpg" alt="Roy Lichtenstein">
+          <p>Roy Lichtenstein, artiste américain, a détourné les codes de la bande dessinée pour créer une peinture ironique et graphique.</p>
+        </div>
+        <div class="modal-right">
+          <h2>Whaam!</h2>
+          <p>Inspirée des comics américains, cette œuvre monumentale (1963) met en scène un combat aérien entre deux avions de chasse. Lichtenstein y reproduit fidèlement le style de la bande dessinée : traits noirs épais, couleurs primaires, trames de points (Ben-Day dots), bulles de texte. Ce pastiche questionne la frontière entre art populaire et art noble, tout en critiquant la glorification de la guerre dans les médias. L’œuvre est à la fois spectaculaire, ironique et engagée.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL 6 : Pablo Picasso -->
+    <div id="modal6" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal6')">&times;</span>
+        <div class="modal-left">
+          <img src="../img/picasso_photo.jpg" alt="Pablo Picasso">
+          <p>Pablo Picasso, cofondateur du cubisme, est connu pour ses œuvres fragmentées et sa capacité à réinventer les formes.</p>
+        </div>
+        <div class="modal-right">
+          <h2>The Weeping Woman</h2>
+          <p>Peinte en 1937, cette œuvre fait partie des suites de « Guernica ». Elle représente Dora Maar, muse et amante de Picasso, en proie à une douleur intense. Le style cubiste déstructure le visage en formes anguleuses et couleurs criardes. Larmes, mouchoir, yeux dédoublés : tout évoque le chagrin, mais aussi l’impossibilité de le contenir ou de le représenter de manière linéaire. C’est un cri pictural contre la souffrance individuelle et collective, un portrait de la douleur à l’état pur.</p>
+        </div>
+      </div>
+    </div>
+
+  <!-- Javascript - généré par l'IA -->
+  
+	<script>
+
+    // Pour faire apparaitre les descriptions des tableaux en pop up
+		function openModal(modalId) {
+    document.getElementById(modalId).style.display = "block";
+  }
+
+  function closeModal(modalId) {
+    document.getElementById(modalId).style.display = "none";
+  }
+
+  window.onclick = function (event) {
+    const modals = document.querySelectorAll(".modal");
+    modals.forEach(function (modal) {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  };
+
+  // Pour faire apparaitre le menu burger
+  const toggleBtn = document.getElementById('nav-toggle');
+    const navBar = document.getElementById('nav-bar');
+    const icon = toggleBtn.querySelector('.burger-icon');
+
+    toggleBtn.addEventListener('click', () => {
+      navBar.classList.toggle('active');
+      icon.textContent = navBar.classList.contains('active') ? '✖' : '☰';
+    });
+
+      // Sélectionne tous les liens et boutons dans la nav
+  const navItems = document.querySelectorAll('.nav-bar a, .nav-bar .dropbtn');
+
+  navItems.forEach(item => {
+    item.addEventListener('click', () => {
+      // Retire la classe 'selected' de tous les items
+      navItems.forEach(el => el.classList.remove('selected'));
+      // Ajoute la classe 'selected' à l'élément cliqué
+      item.classList.add('selected');
+    });
+  });
+  </script>
+
+  <!-- Pied de la page avec les réseaux et le mail cliquable du développeur -->
+  <footer class="max-width">
+    <p>
+      <a href="mailto:selyan.mouhali@utt.fr">Selyan Mouhali</a> © 2025 - Londres - All rights reserved -
+      <a href="https://www.instagram.com/selyan_mhli" target="_blank" title="Instagram">
+        <img src="../img/insta.png" alt="Instagram">
+      </a>
+      <a href="https://www.linkedin.com/in/selyanmouhali" target="_blank" title="LinkedIn">
+        <img src="../img/linkedin.png" alt="LinkedIn">
+      </a>
+    </p>
+	</footer>
+
+</body>
+
+  

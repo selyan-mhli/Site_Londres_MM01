@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	
+  <!-- Balises de référencement -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Découvrez notre page dédiée aux incontournables de Londres, des monuments emblématiques aux expériences uniques. Explorez la culture britannique à travers ses sites historiques et modernes.">
+  <meta name="author" content="Selyan Mouhali">
+  <meta name="keywords" content="londres, uk, voyage, culture, incontournable, monuments, big ben, london eyes">
+
+  <!-- Titre de la page -->
+  <title>Incontournables</title>
+
+  <!--Favicon-->
+  <link rel="icon" href="../img/favicon_noskip.png" type="image/png">
+
+  <!--Import des fichiers CSS-->
+  <link rel="stylesheet" href="../style/style.css"/>
+
+  <!-- Police : Roboto -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <!-- Police : Bebas -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div class="header-container">
+
+    <!-- Bouton burger -->
+    
+      <div class="menu-header">
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+        <span class="burger-icon">☰</span>
+      </button>
+      <h1 class="hide"> Incontournables</h1>
+      </div>
+
+    <!-- Barre de navigation -->
+    
+    <nav class="nav-bar" id="nav-bar">
+
+      <a href="../index.html" class="active">ACCUEIL</a>
+      
+      <div class="dropdown">
+          <button class="dropbtn">CULTURE</button>
+          <div class="dropdown-content">
+          <a href="food.html">Gastronomie</a>
+          <a href="film.html">Filmographie</a>
+          <a href="music.html">Discographie</a>
+          </div>
+      </div>
+
+      <div class="dropdown">
+          <button class="dropbtn">URBANISME</button>
+          <div class="dropdown-content">
+          <a href="noskip.html">Incontournables</a>
+          <a href="quartiers1.html">Quartiers thématiques</a>
+          <a href="quartiers2.html">Quartiers "undergrounds"</a>
+          </div>
+      </div>
+
+      <div class="dropdown">
+          <button class="dropbtn">TOURISME</button>
+          <div class="dropdown-content">
+          <a href="musee.html">Musées</a>
+          <a href="shop.html">Shopping</a>
+          <a href="cars.html">Automobile</a>
+          <a href="foot.html">Football</a>
+          </div>
+      </div>
+
+      <a href="contact.html">CONTACT</a>
+      <a href="quiz.html">QUIZ</a>
+    </nav>
+      
+  </div>
+  <div class="max-width">
+
+    <h2 class="hide">Découvre les monuments à ne pas rater à Londres</h2>
+      
+    <div class="carousel-container">
+        <button class="nav-button prev-btn" aria-label="Previous destination">←</button>
+        
+        <div class="carousel" id="carousel">
+          
+          <!--Monument 1-->
+          <div class="card color">
+            <img class="card-image" src="../img/big_ben_page_d_accueil.jpg" alt="" />
+            <div class="card-badge">Popular</div>
+            <div class="card-header">
+              <h2 class="card-title">Big Ben</h2>
+              <p class="card-subtitle">Symbole emblématique britannique</p>
+            </div>
+            <div class="card-content">
+              <p>
+                Découvrez l’un des monuments les plus célèbres du Royaume-Uni. Admirez l’architecture néogothique de la tour Elizabeth et écoutez le carillon iconique de Big Ben. Un lieu incontournable à visiter, surtout lors du passage à l’heure pile.
+              </p>
+            </div>
+            <div class="card-meta">
+              <div class="card-rating">
+                <span class="stars">★★★★★</span> 4.7
+              </div>
+              <span>1-2 heures</span>
+            </div>
+            <div class="card-footer">
+              <button class="card-button" onclick="window.open('https://fr.wikipedia.org/wiki/Big_Ben', '_blank')">
+                En savoir plus
+              </button>
+            </div>
+          </div>
+
+             
+          <!--Monument 2-->
+          <div class="card color">
+            <img class="card-image" src="../img/tower_bridge.jpg" alt="" />
+            <div class="card-badge">Must-do</div>
+            <div class="card-header">
+              <h2 class="card-title">Tower Bridge</h2>
+              <p class="card-subtitle">Un pont entre histoire et modernité</p>
+            </div>
+            <div class="card-content">
+              <p>
+                Traversez l’un des ponts les plus célèbres du monde. Avec ses deux tours majestueuses et sa passerelle vitrée suspendue, Tower Bridge offre une vue imprenable sur la Tamise. De jour comme de nuit, un spectacle architectural saisissant.
+              </p>
+            </div>
+            <div class="card-meta">
+              <div class="card-rating">
+                <span class="stars">★★★★★</span> 4.8
+              </div>
+              <span>1-2 heures</span>
+            </div>
+            <div class="card-footer">
+              <button class="card-button" onclick="window.open('https://fr.wikipedia.org/wiki/Tower_Bridge', '_blank')">
+                En savoir plus
+              </button>
+            </div>
+          </div>
+
+          <!--Monument 3-->
+          <div class="card color">
+            <img class="card-image" src="../img/buckingham_palace_avec_gardes.jpg" alt="" />
+            <div class="card-badge">Historical</div>
+            <div class="card-header">
+              <h2 class="card-title">Buckingham Palace</h2>
+              <p class="card-subtitle">La résidence royale par excellence</p>
+            </div>
+            <div class="card-content">
+              <p>
+                Admirez la façade imposante du palais et assistez, si vous avez de la chance, à la relève de la garde. Le symbole vivant de la monarchie britannique vous ouvre ses portes l’été pour une visite des somptueux appartements d’État.
+              </p>
+            </div>
+            <div class="card-meta">
+              <div class="card-rating">
+                <span class="stars">★★★★★</span> 4.6
+              </div>
+              <span>1-3 heures</span>
+            </div>
+            <div class="card-footer">
+              <button class="card-button" onclick="window.open('https://fr.wikipedia.org/wiki/Palais_de_Buckingham', '_blank')">
+                En savoir plus
+              </button>
+            </div>
+          </div>
+
+          <!--Monument 4-->
+          <div class="card color">
+            <img class="card-image" src="../img/london_eyes.jpg" alt="" />
+            <div class="card-badge">Famous</div>
+            <div class="card-header">
+              <h2 class="card-title">London Eye</h2>
+              <p class="card-subtitle">Londres à 135 mètres d’altitude</p>
+            </div>
+            <div class="card-content">
+              <p>
+                Embarquez à bord de la plus grande roue d'Europe pour un panorama exceptionnel à 360° sur Londres. Chaque capsule vous fait survoler les monuments iconiques, du palais de Westminster au Shard, en une trentaine de minutes.
+              </p>
+            </div>
+            <div class="card-meta">
+              <div class="card-rating">
+                <span class="stars">★★★★★</span> 4.7
+              </div>
+              <span>30 minutes</span>
+            </div>
+            <div class="card-footer">
+              <button class="card-button" onclick="window.open('https://fr.wikipedia.org/wiki/London_Eye', '_blank')">
+                En savoir plus
+              </button>
+            </div>
+          </div>
+
+          <!--Monument 5-->
+          <div class="card color">
+            <img class="card-image" src="../img/st_paul_cathedral_interieur.jpg" alt="" />
+            <div class="card-badge">Famous</div>
+            <div class="card-header">
+              <h2 class="card-title">Cathédrale St-Paul</h2>
+              <p class="card-subtitle">Un chef-d'œuvre spirituel et architectural</p>
+            </div>
+            <div class="card-content">
+              <p>
+                Grimpez jusqu’au sommet du dôme pour une vue spectaculaire sur la ville. Découvrez l’intérieur grandiose de la cathédrale où se mêlent histoire, spiritualité et musique. Un lieu de recueillement chargé d’histoire.
+              </p>
+            </div>
+            <div class="card-meta">
+              <div class="card-rating">
+                <span class="stars">★★★★★</span> 4.7
+              </div>
+              <span>1-2 heures</span>
+            </div>
+            <div class="card-footer">
+              <button class="card-button" onclick="window.open('https://fr.wikipedia.org/wiki/Cath%C3%A9drale_Saint-Paul_de_Londres', '_blank')">
+                En savoir plus
+              </button>
+            </div>
+          </div>
+        </div>
+        <button class="nav-button next-btn" aria-label="Next destination">→</button>
+      </div>
+
+    <!-- Javascript - généré par l'IA -->
+    <script>
+
+      document.addEventListener('DOMContentLoaded', function() {
+      const carousel = document.getElementById('carousel');
+      const cards = Array.from(carousel.querySelectorAll('.card'));
+      const prevBtn = document.querySelector('.prev-btn');
+      const nextBtn = document.querySelector('.next-btn');
+
+      let currentIndex = 0;
+      let isScrolling = false;
+
+      function scrollToCard(index) {
+        if (index < 0) index = 0;
+        if (index >= cards.length) index = cards.length - 1;
+        if (isScrolling) return;
+
+        currentIndex = index;
+        isScrolling = true;
+
+        const card = cards[index];
+        const cardWidth = card.offsetWidth;
+        const cardLeft = card.offsetLeft;
+        const carouselWidth = carousel.offsetWidth;
+
+        // Center the card in the viewport
+        const scrollPosition = cardLeft - (carouselWidth / 2) + (cardWidth / 2);
+
+        // Use smoother animation with more steps
+        const startPosition = carousel.scrollLeft;
+        const distance = scrollPosition - startPosition;
+        const duration = 500; // ms
+        const steps = 30;
+        const delay = duration / steps;
+
+        let currentStep = 0;
+
+        const smoothScroll = setInterval(() => {
+          currentStep++;
+
+          if (currentStep > steps) {
+            clearInterval(smoothScroll);
+            isScrolling = false;
+            return;
+          }
+
+          // Use easeInOutCubic easing function for smoother animation
+          let progress = currentStep / steps;
+          progress = progress < 0.5 
+            ? 4 * progress * progress * progress 
+          : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+
+          const currentPosition = startPosition + distance * progress;
+
+          carousel.scrollLeft = currentPosition;
+        }, delay);
+      }
+
+      // Find which card is most visible after scrolling
+      function updateCurrentIndex() {
+        if (isScrolling) return;
+
+        const scrollPosition = carousel.scrollLeft;
+        const viewportMiddle = scrollPosition + (carousel.offsetWidth / 2);
+
+        let closestIndex = 0;
+        let closestDistance = Math.abs(cards[0].offsetLeft + (cards[0].offsetWidth / 2) - viewportMiddle);
+
+        cards.forEach((card, index) => {
+          const cardMiddle = card.offsetLeft + (card.offsetWidth / 2);
+          const distance = Math.abs(cardMiddle - viewportMiddle);
+
+          if (distance < closestDistance) {
+            closestDistance = distance;
+            closestIndex = index;
+          }
+        });
+
+        if (closestIndex !== currentIndex) {
+          currentIndex = closestIndex;
+        }
+      }
+
+      // Scroll to initial card (first card)
+      setTimeout(() => {
+        scrollToCard(0);
+      }, 100);
+
+      // Previous button
+      prevBtn.addEventListener('click', () => {
+        scrollToCard(currentIndex - 1);
+      });
+
+      // Next button
+      nextBtn.addEventListener('click', () => {
+        scrollToCard(currentIndex + 1);
+      });
+
+      // Update current index on scroll
+      carousel.addEventListener('scroll', () => {
+        if (!isScrolling) {
+          updateCurrentIndex();
+        }
+      });
+
+      // Debounce function to limit scroll events
+      function debounce(func, wait) {
+        let timeout;
+        return function() {
+          const context = this;
+          const args = arguments;
+          clearTimeout(timeout);
+          timeout = setTimeout(() => {
+            func.apply(context, args);
+          }, wait);
+        };
+      }
+
+      // Use debounced version for scroll end detection
+      const handleScrollEnd = debounce(() => {
+        isScrolling = false;
+        updateCurrentIndex();
+      }, 100);
+
+      carousel.addEventListener('scroll', handleScrollEnd);
+
+      // Keyboard navigation
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') {
+          scrollToCard(currentIndex - 1);
+        } else if (e.key === 'ArrowRight') {
+          scrollToCard(currentIndex + 1);
+        }
+      });
+
+      // Touch swipe support
+      let touchStartX = 0;
+
+      carousel.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+      });
+
+      carousel.addEventListener('touchend', (e) => {
+        const touchEndX = e.changedTouches[0].screenX;
+        const swipeThreshold = 50;
+
+        if (touchStartX - touchEndX > swipeThreshold) {
+          // Swipe left
+          scrollToCard(currentIndex + 1);
+        } else if (touchEndX - touchStartX > swipeThreshold) {
+          // Swipe right
+          scrollToCard(currentIndex - 1);
+        }
+      });
+    });
+
+    // Pour faire apparaitre le menu burger
+  const toggleBtn = document.getElementById('nav-toggle');
+    const navBar = document.getElementById('nav-bar');
+    const icon = toggleBtn.querySelector('.burger-icon');
+
+    toggleBtn.addEventListener('click', () => {
+      navBar.classList.toggle('active');
+      icon.textContent = navBar.classList.contains('active') ? '✖' : '☰';
+    });
+
+      // Sélectionne tous les liens et boutons dans la nav
+  const navItems = document.querySelectorAll('.nav-bar a, .nav-bar .dropbtn');
+
+  navItems.forEach(item => {
+    item.addEventListener('click', () => {
+      // Retire la classe 'selected' de tous les items
+      navItems.forEach(el => el.classList.remove('selected'));
+      // Ajoute la classe 'selected' à l'élément cliqué
+      item.classList.add('selected');
+    });
+  });
+
+    </script>
+
+  </div>
+
+  <!-- Pied de la page avec les réseaux et le mail cliquable du développeur -->
+  
+    <footer>
+      <p> 
+        <a href="mailto:selyan.mouhali@utt.fr">Selyan Mouhali</a> © 2025 - Londres - All rights reserved -
+
+        <a href="https://www.instagram.com/selyan_mhli" target="_blank" title="Instagram">
+            <img src="../img/insta.png" alt="Instagram">
+        </a>
+        <a href="https://www.linkedin.com/in/selyanmouhali" target="_blank" title="LinkedIn">
+            <img src="../img/linkedin.png" alt="LinkedIn">
+        </a>
+      </p>
+    </footer>
+
+</body>
+</html>
+
+
+
+  

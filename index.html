@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    
+    <!-- Balises de référencement -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Découvrez notre site sur Londres dédié à la culture, au voyage et à la découverte.">
+    <meta name="author" content="Selyan Mouhali">
+    <meta name="keywords" content="londres, uk, voyage, culture, gastronomie, musées, musique">
+
+    <!-- Titre de la page -->
+    <title>Accueil</title>
+
+    <!-- Pour les icones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!--Favicon-->
+    <link rel="icon" href="./img/favison_garde.png" type="image/png">
+
+    <!--Import des fichiers CSS-->
+    <link rel="stylesheet" href="./style/style.css"/>
+
+    <!-- Police : Urbanist -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <!-- Police : Bebas -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  
+
+</head>
+
+<body>
+
+  
+    <!-- Parallax video section -->
+    <div class="parallax-container">
+
+        <!-- Animation de chargement avec logo -->
+        <div id="loader">
+            <img src="./img/uk_flag.png" alt="Chargement..." class="loader-icon">
+        </div>
+
+        <!-- Vidéo de fond -->
+        <div class="video-background">
+            <video autoplay muted loop playsinline>
+            <source src="video/view_page_accueil.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="header-container">
+
+            <!-- Bouton burger -->
+        
+            <div class="menu-header">
+            <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+                <span class="burger-icon">☰</span>
+            </button>
+            <h1 class="hide">Accueil</h1>
+            </div>
+
+            <!-- Barre de navigation -->
+
+            <nav class="nav-bar" id="nav-bar">
+
+                <a href="./index.html" class="active">ACCUEIL</a>
+                
+                <div class="dropdown">
+                    <button class="dropbtn">CULTURE</button>
+                    <div class="dropdown-content">
+                    <a href="./page/food.html">Gastronomie</a>
+                    <a href="./page/film.html">Filmographie</a>
+                    <a href="./page/music.html">Discographie</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn">URBANISME</button>
+                    <div class="dropdown-content">
+                    <a href="./page/noskip.html">Incontournables</a>
+                    <a href="./page/quartiers1.html">Quartiers thématiques</a>
+                    <a href="./page/quartiers2.html">Quartiers "undergrounds"</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn">TOURISME</button>
+                    <div class="dropdown-content">
+                    <a href="./page/musee.html">Musées</a>
+                    <a href="./page/shop.html">Shopping</a>
+                    <a href="./page/cars.html">Automobile</a>
+                    <a href="./page/foot.html">Football</a>
+                    </div>
+                </div>
+
+                <a href="./page/contact.html">CONTACT</a>
+                <a href="./page/quiz.html">QUIZ</a>
+            </nav>
+
+        </div>
+            
+        <div class="box">
+            <p>Allons à</p><br>
+            <h2>Londres</h2>
+        </div>
+
+        <div class="scroll-down-box">
+            <p>Scroll down</p>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </div>
+
+    <!-- Section sur la carte intéractive -->
+    <section class="static-map-section">
+        
+        <h2>Carte interactive de Londres</h2>
+        <p class="pulse">Survolez les points pour découvrir des lieux emblématiques</p>
+        <p class="hide">Cliquez les points pour découvrir des lieux emblématiques</p>
+
+        <div class="map-container">
+            <img src="img/carte_interactive.png" alt="Carte de Londres" class="map-image">
+
+            <div class="map-point" style="top: 63%; left: 51%;"
+                data-title="Big Ben"
+                data-img="./img/big_ben_page_d_accueil.jpg">
+            <div class="map-tooltip">
+                <p>Big Ben : l'horloge emblématique de Londres</p>
+                <img src="./img/big_ben_page_d_accueil.jpg">
+            </div>
+            </div>
+
+            <div class="map-point" style="top: 0%; left: 51%;"
+                data-title="King's Cross Station"
+                data-img="./img/king_cross_station.jpg">
+            <div class="map-tooltip">
+                <p>King's Cross Station : une gare unique</p>
+                <img src="./img/king_cross_station.jpg">
+            </div>
+            </div>
+
+            <div class="map-point" style="top: 61%; left: 37%;"
+                data-title="Buckingham Palace"
+                data-img="./img/buckingham_palace_avec_gardes.jpg">
+            <div class="map-tooltip">
+                <p>Buckingham Palace : résidence officielle de la monarchie</p>
+                <img src="./img/buckingham_palace_avec_gardes.jpg">
+            </div>
+            </div>
+
+            <div class="map-point" style="top: 39%; left: 38%;"
+                data-title="Regent Street"
+                data-img="./img/regen_street_1.jpg">
+            <div class="map-tooltip">
+                <p>Regent Street : l'une des plus célèbres rues commerçantes</p>
+                <img src="./img/regen_street_1.jpg">
+            </div>
+            </div>
+
+            <div class="map-point" style="top: 32%; left: 36%;"
+                data-title="Oxford Street"
+                data-img="./img/oxford_street_1.jpg">
+            <div class="map-tooltip">
+                <p>Oxford Street : paradis du shopping londonien</p>
+                <img src="./img/oxford_street_1.jpg">
+            </div>
+            </div>
+
+            <div class="map-point" style="top: 58%; left: 55%;"
+                data-title="London Eye"
+                data-img="./img/vue_depuis_london_eye.jpg">
+            <div class="map-tooltip">
+                <p>London Eye : vue panoramique sur toute la ville</p>
+                <img src="./img/vue_depuis_london_eye.jpg">
+            </div>
+            </div>
+
+            <div class="map-point" style="top: 45%; left: 47%;"
+                data-title="National Gallery"
+                data-img="./img/national_gallery_musee.jpg">
+            <div class="map-tooltip">
+                <p>National Gallery : chef-d'œuvre de l'art classique</p>
+                <img src="./img/national_gallery_musee.jpg">
+            </div>
+            </div>
+
+            <div class="map-point" style="top: 48%; left: 71%;"
+                data-title="Tate Modern"
+                data-img="./img/tate_gallery_musee_1.jpg">
+            <div class="map-tooltip">
+                <p>Tate Modern : musée d'art contemporain incontournable</p>
+                <img src="./img/tate_gallery_musee_1.jpg">
+            </div>
+            </div>
+
+            <div class="map-point" style="top: 42%; left: 72%;"
+                data-title="Millennium Bridge"
+                data-img="./img/millenium_bridge_2.jpeg">
+            <div class="map-tooltip">
+                <p>Millennium Bridge : passerelle piétonne futuriste</p>
+                <img src="./img/millenium_bridge_2.jpeg">
+            </div>
+            </div>
+
+            <div class="map-point" style="top: 36%; left: 86%;"
+                data-title="Leadenhall Market"
+                data-img="./img/leadenhall_market.jpg">
+            <div class="map-tooltip">
+                <p>Leadenhall Market : marché couvert à l'architecture victorienne</p>
+                <img src="./img/leadenhall_market.jpg">
+            </div>
+            </div>
+
+            <div class="map-point" style="top: 35%; left: 72%;"
+                data-title="St Paul's Cathedral"
+                data-img="./img/st_paul_cathedral_interieur.jpg">
+            <div class="map-tooltip">
+                <p>St Paul's Cathedral : dôme emblématique de la ville</p>
+                <img src="./img/st_paul_cathedral_interieur.jpg">
+            </div>
+            </div>
+
+            <div class="map-point" style="top: 52%; left: 91%;"
+                data-title="Tower Bridge"
+                data-img="./img/tower_bridge.jpg">
+            <div class="map-tooltip">
+                <p>Tower Bridge : figure mythique de la Tamise</p>
+                <img src="./img/tower_bridge.jpg">
+            </div>
+            </div>
+        </div>
+
+        <!-- Zone d’affichage dynamique pour mobile -->
+        <div class="mobile-tooltip-area" id="mobile-tooltip-area"></div>
+
+    </section>
+
+        <!-- Zone d’affichage dynamique pour mobile -->
+        <div class="mobile-tooltip-area" id="mobile-tooltip-area"></div>
+    </section>
+    
+    <!-- Javascript généré avec l'IA -->
+    <script>
+        
+        // Pour l'affichage du menu burger
+
+            const toggleBtn = document.getElementById('nav-toggle');
+            const navBar = document.getElementById('nav-bar');
+            const icon = toggleBtn.querySelector('.burger-icon');
+
+            toggleBtn.addEventListener('click', () => {
+            navBar.classList.toggle('active');
+            icon.textContent = navBar.classList.contains('active') ? '✖' : '☰';
+            });
+
+            // Sélectionne tous les liens et boutons dans la nav
+        const navItems = document.querySelectorAll('.nav-bar a, .nav-bar .dropbtn');
+
+        navItems.forEach(item => {
+            item.addEventListener('click', () => {
+            // Retire la classe 'selected' de tous les items
+            navItems.forEach(el => el.classList.remove('selected'));
+            // Ajoute la classe 'selected' à l'élément cliqué
+            item.classList.add('selected');
+            });
+        });
+
+        // Pour l'affichage du point de la carte intéractive au format 425px
+                document.addEventListener("DOMContentLoaded", () => {
+        const tooltipArea = document.getElementById("mobile-tooltip-area");
+
+        document.querySelectorAll(".map-point").forEach(point => {
+            point.addEventListener("click", () => {
+            const title = point.getAttribute("data-title");
+            const img = point.getAttribute("data-img");
+
+            if (!title || !img) return;
+
+            tooltipArea.style.display = "block"; // affichage seulement au clic
+            tooltipArea.innerHTML = `
+                <div style="background:white; border-radius:10px; padding:5px;">
+                <h3 style="color:#174A56; font-size:1.2rem;">${title}</h3>
+                <img src="${img}" alt="${title}" style="max-width:100%; border-radius:8px; margin-top:10px;">
+                </div>
+            `;
+
+            tooltipArea.scrollIntoView({ behavior: "smooth" });
+            });
+        });
+        });
+
+        // Pour faire disparaître le loader après chargement -->
+        window.addEventListener("load", () => {
+            const loader = document.getElementById("loader");
+            setTimeout(() => {
+            loader.style.opacity = "0";
+            setTimeout(() => {
+                loader.style.display = "none";
+            }, 500); // durée de la transition de fade-out
+            }, 1500); // délai AVANT disparition (ajustable)
+        });
+    </script>
+
+    <!-- Pied de page avec les réseaux et le mail cliquable du développeur -->
+    <footer>
+            <p> 
+                <a href="mailto:selyan.mouhali@utt.fr">Selyan Mouhali</a> © 2025 - Londres - All rights reserved -
+
+                <a href="https://www.instagram.com/selyan_mhli" target="_blank" title="Instagram">
+                    <img src="./img/insta.png" alt="Instagram">
+                </a>
+                <a href="https://www.linkedin.com/in/selyanmouhali" target="_blank" title="LinkedIn">
+                    <img src="./img/linkedin.png" alt="LinkedIn">
+                </a>
+            </p>
+            
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+  <!-- Balises de référencement -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Découvrez notre page dédiée au football. Explorez les clubs emblématiques, les stades et l'histoire du football à Londres.">
+  <meta name="author" content="Selyan Mouhali">
+  <meta name="keywords" content="londres, uk, football, premier league, club, maillots">
+
+  <!-- Titre de la page -->
+  <title>Football</title>
+
+  <!-- Pour les icones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!--Favicon-->
+  <link rel="icon" href="../img/favicon_foot.png" type="image/png">
+
+  <!--Import des fichiers CSS-->
+  <link rel="stylesheet" href="../style/foot.css"/>
+
+  <!-- Police : Urbanist -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
+  <!-- Police : Roboto -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
+  <!-- Police : Bebas -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Bouton burger -->
+  
+  <div class="menu-header">
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+    <span class="burger-icon">☰</span>
+    </button>
+    <h1 class="hide">Football</h1>
+  </div>
+
+  <!-- Barre de navigation -->
+
+  <nav class="nav-bar" id="nav-bar">
+  
+    <a href="../index.html" class="active">ACCUEIL</a>
+    
+    <div class="dropdown">
+      <button class="dropbtn">CULTURE</button>
+      <div class="dropdown-content">
+        <a href="food.html">Gastronomie</a>
+        <a href="film.html">Filmographie</a>
+        <a href="music.html">Discographie</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button class="dropbtn">URBANISME</button>
+      <div class="dropdown-content">
+        <a href="noskip.html">Incontournables</a>
+        <a href="quartiers1.html">Quartiers thématiques</a>
+        <a href="quartiers2.html">Quartiers "undergrounds"</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button class="dropbtn">TOURISME</button>
+      <div class="dropdown-content">
+        <a href="musee.html">Musées</a>
+        <a href="shop.html">Shopping</a>
+        <a href="cars.html">Automobile</a>
+        <a href="foot.html">Football</a>
+      </div>
+    </div>
+
+    <a href="contact.html">CONTACT</a>
+    <a href="quiz.html">QUIZ</a>
+  </nav>
+
+  <h2 class="hide">Londres : une capitale footballistique</h2>
+
+  <!-- Partie avec le texte et le widget "classement" -->
+
+  <section class="section-wrapper">
+    <div class="section-card">
+
+      <div class="section-content">
+        <h2 class="section-title">La Premier League</h2>
+        <p class="section-text">
+          Le football est bien plus qu'un simple sport à Londres, c'est une véritable passion qui unit les habitants de la ville.
+          Avec ses clubs emblématiques, ses stades mythiques et son histoire riche, Londres est le berceau du football moderne.
+          Découvrez les clubs qui font vibrer la ville, des Gunners d'Arsenal aux Blues de Chelsea, en passant par les Spurs de
+          Tottenham et les Eagles de Crystal Palace.
+        </p>
+      </div>
+
+      <div class="section-widget">
+        <iframe
+          src="https://www.scoreaxis.com/widget/standings-widget/8?autoHeight=0&amp;borderColor=%23d33115&amp;lang=fr&amp;inst=45ce5"
+          style="width:100%;height:100%;border:none;border-radius:8px;"
+          title="Classement Premier League">
+        </iframe>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Partie sur le caroussel avec les maillots défilants -->
+
+  <div class="all">
+    <div class="carousel-container">
+              
+    <h2 class="title">Les maillots des équipes londonnienes</h2>
+
+    <button class="nav-arrow left">‹</button>
+    <div class="carousel-track">
+      <div class="card" data-index="0">
+      <img src="../img/maillot_arsenal.png" alt="Arsenal" />
+      </div>
+      <div class="card" data-index="1">
+      <img src="../img/maillot_chelsea.png" alt="Chelsea" />
+      </div>
+      <div class="card" data-index="2">
+      <img src="../img/maillot_palace.png" alt="Crystal Palace" />
+      </div>
+      <div class="card" data-index="3">
+      <img src="../img/maillot_tot.png" alt="Tottenham Hotspur" />
+      </div>
+      <div class="card" data-index="4">
+      <img src="../img/maillot_fulham.png" alt="Fulham" />
+      </div>
+    </div>
+    <button class="nav-arrow right">›</button>
+    </div>
+
+    <div class="member-info">
+      <div class="member-name"></div>
+      <div class="member-role"></div>
+    </div>
+
+    <div class="dots">
+    <div class="dot active" data-index="0"></div>
+    <div class="dot" data-index="1"></div>
+    <div class="dot" data-index="2"></div>
+    <div class="dot" data-index="3"></div>
+    <div class="dot" data-index="4"></div>
+
+	</div>
+  
+  </div>
+
+  <!-- Javascript - généré par l'IA -->
+
+  <script>
+
+  // Carousel des maillots de football
+    const teamMembers = [
+    { name: "Arsenal", role: "Club du nord de Londres fondé en 1886." },
+    { name: "Chelsea", role: "Club de l'ouest de Londres, fondé en 1905." },
+    { name: "Crystal Palace", role: "Basé à Croydon, sud de Londres, fondé en 1905." },
+    { name: "Tottenham Hotspur", role: "Club rival d'Arsenal, basé à Tottenham, fondé en 1882." },
+    { name: "Fulham", role: "Club le plus ancien de Londres, fondé en 1879." }
+  ]
+
+  const cards = document.querySelectorAll(".card");
+  const dots = document.querySelectorAll(".dot");
+  const memberName = document.querySelector(".member-name");
+  const memberRole = document.querySelector(".member-role");
+  const leftArrow = document.querySelector(".nav-arrow.left");
+  const rightArrow = document.querySelector(".nav-arrow.right");
+  let currentIndex = 0;
+  let isAnimating = false;
+
+  function updateCarousel(newIndex) {
+    if (isAnimating) return;
+    isAnimating = true;
+
+    currentIndex = (newIndex + cards.length) % cards.length;
+
+    cards.forEach((card, i) => {
+      const offset = (i - currentIndex + cards.length) % cards.length;
+      card.className = "card"; // reset classes
+
+      if (offset === 0) card.classList.add("center");
+      else if (offset === 1) card.classList.add("right-1");
+      else if (offset === 2) card.classList.add("right-2");
+      else if (offset === cards.length - 1) card.classList.add("left-1");
+      else if (offset === cards.length - 2) card.classList.add("left-2");
+      else card.classList.add("hidden");
+    });
+
+    dots.forEach((dot, i) => {
+      dot.classList.toggle("active", i === currentIndex);
+    });
+
+    memberName.style.opacity = 0;
+    memberRole.style.opacity = 0;
+
+    setTimeout(() => {
+      memberName.textContent = teamMembers[currentIndex].name;
+      memberRole.textContent = teamMembers[currentIndex].role;
+      memberName.style.opacity = 1;
+      memberRole.style.opacity = 1;
+    }, 300);
+
+    setTimeout(() => {
+      isAnimating = false;
+    }, 800);
+  }
+
+  leftArrow.addEventListener("click", () => updateCarousel(currentIndex - 1));
+  rightArrow.addEventListener("click", () => updateCarousel(currentIndex + 1));
+  dots.forEach((dot, i) => dot.addEventListener("click", () => updateCarousel(i)));
+  cards.forEach((card, i) => card.addEventListener("click", () => updateCarousel(i)));
+
+  document.addEventListener("keydown", e => {
+    if (e.key === "ArrowLeft") updateCarousel(currentIndex - 1);
+    else if (e.key === "ArrowRight") updateCarousel(currentIndex + 1);
+  });
+
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  document.addEventListener("touchstart", e => {
+    touchStartX = e.changedTouches[0].screenX;
+  });
+
+  document.addEventListener("touchend", e => {
+    touchEndX = e.changedTouches[0].screenX;
+    const diff = touchStartX - touchEndX;
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) updateCarousel(currentIndex + 1);
+      else updateCarousel(currentIndex - 1);
+    }
+  });
+
+  updateCarousel(0);
+
+  // Pour l'affichage du menu burger
+
+    const toggleBtn = document.getElementById('nav-toggle');
+    const navBar = document.getElementById('nav-bar');
+    const icon = toggleBtn.querySelector('.burger-icon');
+
+    toggleBtn.addEventListener('click', () => {
+      navBar.classList.toggle('active');
+      icon.textContent = navBar.classList.contains('active') ? '✖' : '☰';
+    });
+
+      // Sélectionne tous les liens et boutons dans la nav
+  const navItems = document.querySelectorAll('.nav-bar a, .nav-bar .dropbtn');
+
+  navItems.forEach(item => {
+    item.addEventListener('click', () => {
+      // Retire la classe 'selected' de tous les items
+      navItems.forEach(el => el.classList.remove('selected'));
+      // Ajoute la classe 'selected' à l'élément cliqué
+      item.classList.add('selected');
+    });
+  });
+
+  </script>
+
+  <!-- Pied de la page avec les réseaux et le mail cliquable du développeur -->
+  <footer>
+    <p> 
+      <a href="mailto:selyan.mouhali@utt.fr">Selyan Mouhali</a> © 2025 - Londres - All rights reserved -
+
+      <a href="https://www.instagram.com/selyan_mhli" target="_blank" title="Instagram">
+          <img src="../img/insta.png" alt="Instagram">
+      </a>
+      <a href="https://www.linkedin.com/in/selyanmouhali" target="_blank" title="LinkedIn">
+          <img src="../img/linkedin.png" alt="LinkedIn">
+      </a>
+    </p>
+  </footer>
+
+</body>
+</html>

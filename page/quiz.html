@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	
+  <!-- Balises de référencement -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Découvrez notre page quiz visant à tester les connaissances sur Londres">
+  <meta name="author" content="Selyan Mouhali">
+  <meta name="keywords" content="londres, uk, quiz, questions, culture, blindtest">
+
+  <!-- Titre de la page -->
+	<title>Quiz</title>
+
+  <!--Favicon-->
+  <link rel="icon" href="../img/favicon_quiz.png" type="image/png">
+
+  <!--Import des fichiers CSS-->
+  <link rel="stylesheet" href="../style/style.css"/>
+
+  <!-- Police : Roboto -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <!-- Police : Bebas -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div class="header-container">
+
+    <!-- Bouton burger -->
+    
+      <div class="menu-header">
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+          <span class="burger-icon">☰</span>
+      </button>
+      <h1 class="hide">Quiz</h1>
+      </div>
+
+      <!-- Barre de navigation -->
+    
+    <nav class="nav-bar" id="nav-bar">
+
+      <a href="../index.html" class="active">ACCUEIL</a>
+      
+      <div class="dropdown">
+          <button class="dropbtn">CULTURE</button>
+          <div class="dropdown-content">
+          <a href="food.html">Gastronomie</a>
+          <a href="film.html">Filmographie</a>
+          <a href="music.html">Discographie</a>
+          </div>
+      </div>
+
+      <div class="dropdown">
+          <button class="dropbtn">URBANISME</button>
+          <div class="dropdown-content">
+          <a href="noskip.html">Incontournables</a>
+          <a href="quartiers1.html">Quartiers thématiques</a>
+          <a href="quartiers2.html">Quartiers "undergrounds"</a>
+          </div>
+      </div>
+
+      <div class="dropdown">
+          <button class="dropbtn">TOURISME</button>
+          <div class="dropdown-content">
+          <a href="musee.html">Musées</a>
+          <a href="shop.html">Shopping</a>
+          <a href="cars.html">Automobile</a>
+          <a href="foot.html">Football</a>
+          </div>
+      </div>
+
+      <a href="contact.html">CONTACT</a>
+      <a href="quiz.html">QUIZ</a>
+    </nav>
+  
+  </div>
+  
+  <h2>Testez vos connaissances</h2>
+
+  <div class="quiz-container">
+    <div id="quiz">
+      
+      <!-- Question 1 -->
+      <div class="question-block active" data-correct="St Paul's Cathedral">
+        <div class="question-content">
+          <img src="../img/st_paul_cathedral_interieur.jpg" alt="St Paul's Cathedral" />
+          <div class="question-text-block">
+            <div class="question-text">Quelle est la cathédrale emblématique de Londres ?</div>
+            <button class="answer-btn">St Paul's Cathedral</button>
+            <button class="answer-btn">Notre-Dame</button>
+            <button class="answer-btn">La Sagrada Familia</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Question 2 -->
+      <div class="question-block" data-correct="Fish and Chips">
+        <div class="question-content">
+          <img src="../img/fish&chips.jpg" alt="Fish and Chips" />
+          <div class="question-text-block">
+            <div class="question-text">Quel plat britannique est servi avec des frites ?</div>
+            <button class="answer-btn">Couscous</button>
+            <button class="answer-btn">Fish and Chips</button>
+            <button class="answer-btn">Afternoon Tea</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Question 3 -->
+      <div class="question-block" data-correct="Van Gogh">
+        <div class="question-content">
+          <img src="../img/van_gogh_vase.jpg" alt="Van Gogh" />
+          <div class="question-text-block">
+            <div class="question-text">Qui a peint ce tableau ?</div>
+            <button class="answer-btn">Da Vinci</button>
+            <button class="answer-btn">Claude Monet</button>
+            <button class="answer-btn">Van Gogh</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Question 4 - audio -->
+      <div class="question-block" data-correct="Central Cee">
+        <div class="question-content">
+          <div class="audio-with-poster">
+            <img src="../img/central_cee.jpg" alt="Central Cee" />
+            <audio controls>
+              <source src="../audio/doja_central_cee.mp3" type="audio/mp3" />
+            </audio>
+          </div>
+          <div class="question-text-block">
+            <div class="question-text">Qui chante cette chanson ?</div>
+            <button class="answer-btn">Adèle</button>
+            <button class="answer-btn">Central Cee</button>
+            <button class="answer-btn">Amy Winehouse</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Question 5 - audio -->
+      <div class="question-block" data-correct="Rolling in the Deep">
+        <div class="question-content">
+          <div class="audio-with-poster">
+            <img src="../img/adele.jpg" alt="Adèle" />
+            <audio controls>
+              <source src="../audio/ritd_adele.mp3" type="audio/mp3" />
+            </audio>
+          </div>
+          <div class="question-text-block">
+            <div class="question-text">Quel est le titre de cette chanson ?</div>
+            <button class="answer-btn">Rolling in the Deep</button>
+            <button class="answer-btn">Easy On Me</button>
+            <button class="answer-btn">Set Fire to the Rain</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div id="result" class="result-block" style="display:none;"></div>
+  </div>
+  
+
+  <!-- Javascript - généré par l'IA -->
+ 
+  <script>
+
+    // Pour le déroulement du quiz
+
+        const questions = document.querySelectorAll('.question-block');
+    let current = 0;
+    let score = 0;
+
+    function showNextQuestion() {
+      questions[current].classList.remove('active');
+      current++;
+      if (current < questions.length) {
+        questions[current].classList.add('active');
+      } else {
+        showResult();
+      }
+    }
+
+    function showResult() {
+      const result = document.getElementById('result');
+      result.style.display = 'block';
+      let animatedScore = 0;
+      result.innerHTML = `<p class="result-text" id="animated-score">🎉 Tu as obtenu 0 / ${questions.length}</p>`;
+
+      const interval = setInterval(() => {
+        if (animatedScore < score) {
+          animatedScore++;
+          document.getElementById("animated-score").textContent = `🎉 Tu as obtenu ${animatedScore} / ${questions.length}`;
+        } else {
+          clearInterval(interval);
+
+          const message = document.createElement("p");
+          message.className = "score-message";
+          if (score === questions.length) {
+            message.innerHTML = `💯 Excellent !<br><img src="../img/certificate.png" alt="Certificat" class="certificate-img";">`;
+          } else if (score >= questions.length * 0.7) {
+            message.textContent = "👏 Très bien joué !";
+          } else if (score >= questions.length * 0.4) {
+            message.textContent = "🙂 Pas mal, mais tu peux mieux faire.";
+          } else {
+            message.textContent = "😕 Il est temps de réviser un peu !";
+          }
+
+          result.appendChild(message);
+
+          const shareBtn = document.createElement("button");
+          shareBtn.className = "share-btn";
+          shareBtn.textContent = "📤 Partager mon score";
+          shareBtn.onclick = () => {
+            const shareText = `J'ai obtenu ${score}/${questions.length} au quiz sur Londres 🇬🇧 ! Essaie de me battre !`;
+            const shareUrl = window.location.href;
+            if (navigator.share) {
+              navigator.share({ title: "Quiz Londres", text: shareText, url: shareUrl });
+            } else {
+              const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
+              window.open(twitterUrl, '_blank');
+            }
+          };
+          result.appendChild(shareBtn);
+
+          const retry = document.createElement("button");
+          retry.className = "restart-btn";
+          retry.textContent = "🔁 Recommencer";
+          retry.onclick = () => location.reload();
+          result.appendChild(retry);
+        }
+      }, 40);
+    }
+
+    document.querySelectorAll('.answer-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const parent = button.closest('.question-block');
+        const correctAnswer = parent.getAttribute('data-correct');
+        const isCorrect = button.textContent.trim() === correctAnswer.trim();
+
+        if (isCorrect) {
+          button.classList.add('correct');
+          score++;
+        } else {
+          button.classList.add('wrong');
+        }
+
+        parent.querySelectorAll('.answer-btn').forEach(btn => btn.disabled = true);
+        setTimeout(showNextQuestion, 1000);
+      });
+    });
+
+    // Pour l'affichage du menu burger
+
+            const toggleBtn = document.getElementById('nav-toggle');
+            const navBar = document.getElementById('nav-bar');
+            const icon = toggleBtn.querySelector('.burger-icon');
+
+            toggleBtn.addEventListener('click', () => {
+            navBar.classList.toggle('active');
+            icon.textContent = navBar.classList.contains('active') ? '✖' : '☰';
+            });
+
+            // Sélectionne tous les liens et boutons dans la nav
+        const navItems = document.querySelectorAll('.nav-bar a, .nav-bar .dropbtn');
+
+        navItems.forEach(item => {
+            item.addEventListener('click', () => {
+            // Retire la classe 'selected' de tous les items
+            navItems.forEach(el => el.classList.remove('selected'));
+            // Ajoute la classe 'selected' à l'élément cliqué
+            item.classList.add('selected');
+            });
+        });
+
+  </script>
+
+  <!-- Pied de page avec les réseaux et le mail cliquable du développeur -->
+  <footer>
+    <p> 
+        <a href="mailto:selyan.mouhali@utt.fr">Selyan Mouhali</a> © 2025 - Londres - All rights reserved -
+
+        <a href="https://www.instagram.com/selyan_mhli" target="_blank" title="Instagram">
+            <img src="../img/insta.png" alt="Instagram">
+        </a>
+        <a href="https://www.linkedin.com/in/selyanmouhali" target="_blank" title="LinkedIn">
+            <img src="../img/linkedin.png" alt="LinkedIn">
+        </a>
+    </p>
+  </footer>
+
+</body>
+
+</html>
+
+

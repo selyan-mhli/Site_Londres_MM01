@@ -1,0 +1,2481 @@
+/* CSS GÉNÉRAL À TOUTES LES PAGES */
+
+@charset "UTF-8";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #174A56;
+  font-family: "Urbanist", sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;;
+  color: var(--card-text);
+  overflow-x: hidden;
+}
+
+h1 {
+  text-align: center;
+  padding: 10px 20px;
+  color: white;
+  font-size: 26px;
+  font-family: "Roboto", sans-serif;
+}
+
+h2 {
+  text-align: center;
+  padding:20px 20px;
+  color: white;
+  font-size: 1,5em;
+  font-family: "Urbanist", sans-serif;
+}
+
+h3 {
+  text-align: center;
+  margin : 20px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+  gap: 10px;               
+  margin-top: 0px;  
+}
+
+.max-width {
+  max-width: 1280px;
+  margin: 0 auto; /* centre horizontalement */
+}
+
+/* ANIMATION - généré par l'IA*/
+
+.pulse {
+  animation: pulse 4s infinite;
+  padding-bottom: 15px;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+/* BARRE DE NAVIGATION */
+
+/* BASE NAVBAR  */
+nav {
+  margin:10px;
+}
+
+.nav-bar, .dropbtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 30px;
+  padding: 10px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 24px;
+  letter-spacing: 1px;
+  gap: 10px;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.nav-bar > * {
+  position: relative;
+}
+
+/* Lignes principales */
+
+.nav-bar a,
+.nav-bar .dropbtn {
+  text-decoration: none;
+  color: #174A56;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-align: center;
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Classe pour mettre accueil en bleu clair */
+.nav-bar a.active {
+  background-color: #3FC1C9;
+  color: white !important;
+  font-weight: bold;
+  border-radius: 20px;
+  padding : 10px 20px;
+}
+
+
+/* Barre verticale entre les éléments */
+.nav-bar > *:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: -5px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 32px;
+  background-color: #174A56;
+}
+
+
+/* ====== DROPDOWN CONTAINER ====== */
+.dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Contenu déroulant */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #AAAAAA;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  padding: 8px 0;
+  min-width: 180px;
+  z-index: 1000;
+}
+
+/* Liens dans le dropdown */
+.dropdown-content a {
+  display: block;
+  padding: 10px 16px;
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  top: 100%;
+  left: 0;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.dropdown-content a:hover {
+  background-color: #174A56;
+}
+
+/* Affichage au survol */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.burger-icon {
+  font-size: 2.4rem;
+}
+
+/* PAGE D'ACCUEIL */
+
+/* Loader plein écran */
+#loader {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #174A56;
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+  z-index: 9999;          
+  transition: opacity 0.5s ease; /* Disparition en fondu fluide */
+}
+
+/* Logo animé dans le loader */
+.loader-icon {
+  width: 100px;
+  height: auto;
+  object-fit: contain; 
+  animation: pulse 1.2s infinite ease-in-out; /* Animation en boucle */
+}
+
+/* Animation d’apparition - généré avec l'IA */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);  
+    opacity: 0.8;          
+  }
+  50% {
+    transform: scale(1.1); 
+    opacity: 1;            
+  }
+}
+
+.group {
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+  gap: 50px;               
+  margin-top: 0px;  
+  max-width: 1280px;
+  position: relative;
+  z-index: 1;
+}
+
+.parallax-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 30px 30px;
+  border-radius: 15px;
+  text-align: center;
+  z-index: 0;
+  color: white;
+}
+
+.box h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 5em;
+    color: white;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.box p {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 4em;
+    color: white;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+/* Carte section */
+.static-map-section {
+    position: relative;
+    z-index: 2;
+    background-color: #174A56;
+    padding: 20px 20px;
+    text-align: center;
+    min-height: 100vh;
+}
+
+.static-map-section h2 {
+    font-size: 3em;
+    color: white;
+    margin-bottom: 10px;
+}
+.static-map-section p {
+    font-family: 'Urbanist', serif;
+    font-size: 1.4em;
+    color: white;
+    margin-bottom: 3px;
+}
+
+.map-container {
+    position: relative;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.map-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.map-point {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.map-tooltip {
+  position: absolute;
+  top: -120px;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
+  background: #174A56;
+  border: 1px solid white;
+  color: white;
+  padding: 5px;
+  border-radius: 6px;
+  font-size: 0.8em;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  width: auto;
+}
+
+.map-tooltip img {
+  width: 400px;
+  height: auto;
+  border-radius: 6px;
+  margin-top: 5px;
+}
+
+.map-point:hover .map-tooltip {
+  opacity: 1;
+}
+
+/* Section scroll down généré avec l'IA */
+
+.scroll-down-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-family: "Urbanist", sans-serif;
+  font-size: 1.2rem;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.scroll-down-box i {
+  font-size: 2rem;
+  margin-top: 8px;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* PAGE SUR LA GASTRONOMIE */
+
+/*Flashcard*/
+  
+.flashcard-container-food {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 8px 20px;
+}
+
+.flashcard-food {
+  width: 400px;
+  height: 400px;
+  perspective: 1000px;
+}
+
+.card-inner-food {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flashcard-food:hover .card-inner-food {
+  transform: rotateY(180deg);
+}
+
+.card-front-food, .card-back-food {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #174A56;
+  color: white;
+}
+  
+.card-front-food img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 3px solid white;
+  box-sizing: border-box;
+}
+
+.card-front-food p {
+  font-weight: bold;
+  font-family: "Roboto";
+  text-align: center;
+  margin: 10px 10px;
+  font-size:20px;
+}
+
+.card-back-food {
+  transform: rotateY(180deg);
+  padding: 0px 15px;
+  text-align: justify;
+  background-color: white;
+  color: black;
+  font-size: 20px;
+  font-family: "Roboto",sans-serif;
+}
+
+.card-back-food p {
+  font-family: "Roboto";
+  text-align: justify;
+  margin: 10px 10px;
+  font-size:20px;
+}
+
+.card-back-food h2  {
+  font-weight: bold;
+  font-family: "Roboto";
+  text-align: center;
+  color : black;
+  font-size:30px;
+  margin : 10px;
+}
+
+/* PAGE SUR LA FILMOGRAPHIE */
+
+/*Partie sur Ledenhall Market*/ 
+
+@font-face {
+  font-family: 'harry_potter';
+  src: url('../fonts/HARRYP__.woff2') format('woff2'),
+}
+
+.highlight {
+  display: flex;
+  background-color: #E1E1E1;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px;
+  align-items: center;
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+.highlight img {
+  width: 50%;
+  height : 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  border : 1px solid #174A56;
+}
+
+.image-hover {
+transition: transform 0.3s ease;
+}
+
+.image-hover:hover {
+transform: scale(1.01); /* Agrandit légèrement l'image */
+}
+
+.text-box {
+  width: 50%;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  padding : 0px 20px;
+  flex-direction: column;
+  align-items: center;   
+  justify-content: center;
+  text-align: justify;
+  font-size: 20px;
+}
+
+.text-box h2 {
+  margin-top: 30px;
+  font-family: "harry_potter", sans-serif;
+  font-size: 3em;
+  letter-spacing: 1px;
+  padding : 0px 10px;
+  color : black;
+}
+
+.text-box p {
+  background-color: white;
+  border-radius: 10px;
+  padding : 20px;
+  font-size: 15px;
+  line-height: 1.6;
+  border : 1px solid #174A56;
+}
+
+/*Bouton*/
+
+.button-film {
+  display: inline-block;
+  background-color: #3FC1C9;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  margin-top: 30px;
+  border-radius: 5px;
+}
+
+/*Partie sur les 2 images*/
+
+.locations {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin: 20px;
+}
+
+
+.card-film {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  gap: 20px;
+  background-color: #E1E1E1;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  align-items: flex-start;
+  box-sizing: border-box;
+  
+}
+
+.image-block {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-block img {
+  height: 450px;         
+  width: 100%;             
+  object-fit: cover;       
+  border-radius: 10px;
+  border : 1px solid #174A56;
+}
+
+.image-block p {
+  margin-top: 10px;
+  font-weight: bold;
+  font-family: "harry_potter";
+  letter-spacing: 1px;
+  font-size: 3em;
+  margin-bottom: 0; 
+  color : black;
+}
+
+/* Partie sur la vidéo en bas de page*/
+
+.video-section {
+  background-color: #E1E1E1;
+  padding: 1px 20px 20px 20px;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+.quote {
+  text-align: center;
+  font-family: 'Urbanist', sans-serif;
+  margin: 10px;
+  font-size: 20px;
+  font-style: italic;
+  color : #174A56;
+}
+
+.video-container {
+  margin: 0 auto;
+  width: 100%;
+}
+
+video {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+}
+
+/* PAGE SUR LA DISCOGRAPHIE */
+
+/*Flashcard*/
+
+.flashcard-container-music {
+display: flex;
+justify-content: center;
+align-items: center; 
+gap: 50px;
+flex-wrap: wrap;
+padding: 20px 20px;
+}
+
+.flashcard-music {
+width: 350px;
+height: 400px;
+perspective: 1000px;
+}
+
+.card-inner-music {
+position: relative;
+width: 100%;
+height: 100%;
+transition: transform 0.6s;
+transform-style: preserve-3d;
+}
+
+.flashcard-music:hover .card-inner-music {
+transform: rotateY(180deg);
+}
+
+.card-front-music, .card-back-music {
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+border-radius: 10px;
+overflow: hidden;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+text-align: center;
+color: white;
+}
+
+.card-front-music img {
+width: 100%;
+height: 350px;
+object-fit: cover;
+border-radius: 50%;
+border: 3px solid white;
+box-sizing: border-box;
+}
+
+.card-front-music p {
+font-weight: bold;
+font-family: "Urbanist", sans-serif;
+text-align: center;
+margin: 10px 0;
+font-size : 20px;
+}
+
+.card-back-music {
+padding: 0;
+margin: 0;
+transform: rotateY(180deg);
+border: 1px solid white;
+width: 100%;
+height: auto; 
+display: flex;
+}
+
+/* PAGE SUR LES INCONTOURNABLES */
+
+:root {
+  /* Couleurs de base */
+  --primary-color: #e67e22;
+  --secondary-color: #d35400;
+  --card-bg: #ffffff;
+  --card-text: #333333;
+  --card-shadow: rgba(0, 0, 0, 0.15);
+  --active-card-shadow: rgba(230, 126, 34, 0.4);
+  --carousel-bg: #fffaf5;
+
+  /* Couleurs spécifiques */
+  
+  --color-color: #2980b9;
+  --color-color-hover: #2471a3;
+}
+
+.title {
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-weight: 800;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  margin :20px;
+  max-width: 1200px;
+  margin: 0 auto; /* Centrage horizontal */
+  display: flex;
+  justify-content: center;
+}
+
+/* Carousel */
+.carousel {
+  display: flex;
+  margin:20px 0px;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  background-color: var(--carousel-bg);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+/* Flèches du caroussel */
+
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  font-size: 1.5rem;
+  z-index: 10;
+  opacity: 1;
+}
+
+.prev-btn {
+  left: -25px; /* Position en dehors du caroussel */
+}
+
+.next-btn {
+  right: -25px; /* Position en dehors du caroussel */
+}
+
+.nav-button:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+}
+
+/* Style des cartes "monument" */
+
+.card {
+  flex: 0 0 auto;
+  width: 306px;
+  min-height: 520px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  padding: 0;
+  box-shadow: 0 4px 12px var(--card-shadow);
+  transition: all 0.3s ease;
+  scroll-snap-align: center;
+  position: relative;
+}
+
+.card-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  object-position: center;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  display: block;
+  background-color: #f0f0f0;
+}
+
+.card-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  z-index: 2;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  color: white;
+}
+
+.card-header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.2rem 1.2rem 0.5rem;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.card-subtitle {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.card-content {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #555;
+  padding: 0 1.2rem;
+  text-align: left;
+  margin-bottom: 15px;
+  flex-grow: 1;
+}
+
+.card-content p {
+  margin: 0;
+  padding: 0;
+  text-align: justify;
+}
+
+.card-info-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+}
+
+.card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.8rem 1.2rem;
+  font-size: 0.85rem;
+  color: #777;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.card-rating {
+  display: flex;
+  align-items: center;
+}
+
+.stars {
+  color: gold;
+  margin-right: 5px;
+}
+
+.card-footer {
+  width: 100%;
+  padding: 1rem 1.2rem 1.5rem;
+  background-color: rgba(0, 0, 0, 0.02);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.7rem;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #999;
+  font-size: 0.9rem;
+  margin-right: 8px;
+}
+
+.discount {
+  color: #e53935;
+  font-weight: bold;
+}
+
+.card-button {
+  background-color: #e67e22;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+  font-weight: 600;
+  display: block;
+  margin-top: 10px;
+}
+
+.card-button:hover {
+  background-color: #d35400;
+}
+
+/* Couleurs */
+
+.color .card-badge { background-color: var(--color-color); }
+.color .card-title, .santorini .price { color: var(--color-color); }
+.color .card-button { background-color: var(--color-color); }
+.color .card-button:hover { background-color: var(--color-color-hover); }
+
+/* PAGE SUR LES QUARTIERS */
+
+/* Conteneur principal */
+.flashcard-container-quartiers1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 20px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* Boîte de perspective */
+.flashcard-quartiers1 {
+  width: 100%;
+  max-width: 400px;
+  height: 300px;
+  perspective: 1000px;
+  margin: 0 auto;
+}
+
+/* Élément intérieur à retourner */
+.card-inner-quartiers1 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+/* Effet de retournement */
+.flashcard-quartiers1:hover .card-inner-quartiers1 {
+  transform: rotateY(180deg);
+}
+
+/* Faces avant et arrière */
+.card-front-quartiers1,
+.card-back-quartiers1 {
+  position: absolute;
+  border : 2px solid white;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* FACE AVANT */
+.card-front-quartiers1 {
+  background-color: #fff;
+  text-align: center;
+}
+
+.card-front-quartiers1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Légende sous l'image */
+.card-front-quartiers1 p {
+  position: absolute;
+  bottom: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #174A56;
+  width: 90%;
+  text-align: center;
+  padding: 5px;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+/* FACE ARRIÈRE */
+.card-back-quartiers1 {
+  transform: rotateY(180deg);
+  background-color: white;
+  color: black;
+  font-family: "Roboto", sans-serif;
+  padding: 20px;
+  text-align: justify;
+  justify-content: center;
+}
+
+.card-back-quartiers1 p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  padding: 0 10px;
+}
+
+.card-back-quartiers1 a {
+  text-decoration: none;
+  font-style: bold;
+  color : #3FC1C9;
+}
+
+/* PAGE SUR LES QUARTIERS "UNDERGROUND" */
+
+/* Timeline Container */
+
+.timeline-container {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+/* Ligne centrale */
+.timeline-line {
+  position: absolute;
+  top: 20px;
+  bottom: 20px;
+  left: 50%;
+  width: 4px;
+  background: #3FC1C9;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+/* Points */
+.timeline-point {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 16px;
+  background-color: #3FC1C9;
+  border: 3px solid white;
+  border-radius: 50%;
+  z-index: 2;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Éléments de la timeline */
+.timeline-entry {
+  position: relative;
+  background-color: white;
+  color: black;
+  border-radius: 12px;
+  padding: 20px;
+  width: 45%;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  margin: 40px 0;
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+
+.timeline-entry:hover {
+  transform: translateY(-5px);
+}
+
+/* Position gauche et droite */
+.timeline-entry.left {
+  left: 0;
+}
+
+.timeline-entry.right {
+  left: 55%;
+}
+
+/* Image */
+.timeline-entry img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+/* Texte */
+.timeline-entry h3 {
+  margin: 0 0 10px;
+  color: #174A56;
+  font-size: 1.3em;
+}
+
+.timeline-entry p {
+  margin: 0;
+  text-align: justify;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.timeline-entry a {
+  display: inline-block;
+  color: #3FC1C9;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* PAGE SUR LES MUSÉES */
+
+.museum-section {
+  max-width: 1280px;
+  margin: auto;
+  padding: 20px 20px 0px 20px;
+}
+
+.gallery {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: #f9f9f9;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+}
+
+.gallery h2 {
+  color : #174A56;
+  font-family:'Urbanist',sans-serif;
+  font-size: 2em;
+  margin: 10px;
+}
+
+.description {
+  background: none;
+  font-family: "Urbanist",sans-serif;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 1,25em;
+  margin-bottom: 20px;
+  color: #174A56;
+  font-size: 1.2em;
+}
+
+.description p {
+  font-style: italic;
+  text-align: center;
+
+}
+
+.art-card {
+  width: 300px;
+  height: 300px;
+  background: white;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px;
+  border: 2px solid transparent;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s, border 0.3s;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.art-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px #3FC1C9;
+}
+
+.art-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.art-card h3 {
+  color: #174A56;
+  font-size: 1.1rem;
+  margin :0;  
+}
+
+.art-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  overflow: auto;
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 8% auto;
+  padding: 20px;
+  border-radius: 12px;
+  width: 80%;
+  max-width: 900px;
+  display: flex;
+  gap: 20px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+.modal-left {
+  flex: 1;
+  text-align: center;
+  padding: 20px;
+}
+
+.modal-left img {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.modal-left p {
+  font-size: 0.95em;
+  font-style: italic;
+  color: #333;
+  text-align: justify;
+}
+
+.modal-right {
+  flex: 2;
+  text-align: left;
+  padding: 20px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.modal-right h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #174A56;
+}
+
+.modal-right p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+  text-align: justify;
+  align-items: center;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #000;
+}
+
+/* PAGE SUR LE SHOPPING */
+
+/* Partie sur les magasins */
+
+.shopping-section {
+  padding: 20px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.shopping-card {
+  display: flex;
+  background-color: white;
+  border-radius: 12px;
+  height:400px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.shopping-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px #3FC1C9;
+}
+
+
+.shopping-card.reverse {
+  flex-direction: row-reverse;
+}
+
+.shopping-card img {
+  width: 50%;
+  height: auto;
+  object-fit: cover;
+}
+
+.shopping-card .info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color:black;
+}
+
+.shopping-card h2 {
+  color: #174A56;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.shopping-card p {
+  margin-bottom: 20px;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.button {
+  display: inline-block;
+  background-color: #3FC1C9;
+  color: white;
+  text-align: center;
+  padding: 10px 20px;
+  text-decoration: none;
+  margin-top: 30px;
+  border-radius: 5px;
+}
+
+/* --- Mini-cartes --- */
+.double-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.mini-card {
+  flex: 1;
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.mini-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px #3FC1C9;
+}
+
+.mini-card img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.mini-card h3 {
+  color: #174A56;
+  font-size: 1.1rem;
+}
+
+/* PAGE SUR LES VOITURES */
+
+/* PARALLAX */
+
+.absolute {
+  position: absolute;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display:flex;
+  width: 100%;
+  z-index: 1000;
+}
+
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  position: relative;
+  margin-bottom: 3px;
+  opacity: 0.8;
+}
+
+.bgimg-1 {
+  background-image: url('../img/mclaren.jpg');
+}
+
+.bgimg-2 {
+  background-image: url('../img/rolls_royce.jpeg');
+}
+
+.bgimg-3 {
+  background-image: url('../img/bentley.jpg');
+}
+
+.bgimg-4 {
+  background-image: url('../img/aston_martin.jpg');
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+}
+
+.border {
+  background-color: #111;
+  color: #ffffff;
+  padding: 18px;
+  font-size: 25px;
+  border-radius: 10px;
+}
+
+/* Section scroll down - généré avec l'IA */
+
+.scroll-down-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-family: "Urbanist", sans-serif;
+  font-size: 1.2rem;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.scroll-down-box i {
+  font-size: 2rem;
+  margin-top: 8px;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* PAGE SUR LE FOOTBALL */
+
+/* CF la page de CSS football : foot.css */
+
+/* PAGE SUR CONTACT */
+
+.section-contact {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.contact-form {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #E1E1E1;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  margin-bottom: 6px;
+  color: black;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 10px;
+  border: 2px solid #d3d3d3;
+  border-radius: 8px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #3FC1C9;
+}
+
+.form-button {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.form-button button {
+  background-color: #3FC1C9;
+  color: #fff;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.form-button button:hover {
+  background-color: #145C70;
+}
+
+.team-section {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  padding: 40px;
+  flex-wrap: wrap;
+}
+
+.team-member {
+  text-align: center;
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
+
+.avatar {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border: 1px solid white;
+}
+
+.team-member img {
+  border-radius: 50%;
+  width: 170px;
+  height: 170px;
+  object-fit: cover;
+  border: 3px solid white;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.team-member img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 20px #3FC1C9;
+}
+
+
+/* QUIZ */ 
+
+.quiz-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* centre verticalement si le parent le permet */
+  margin: auto;
+  margin-bottom: 20px;;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: fit-content;
+  max-width: 90%;
+}
+
+.question-block {
+  display: none;
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.question-block.active {
+  display: block;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.question-content {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.question-content img,
+.audio-with-poster {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+.audio-with-poster {
+  position: relative;
+  overflow: hidden;
+}
+
+.audio-with-poster audio {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  background: white;
+  border-radius: 6px;
+}
+
+.question-text-block {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  gap: 10px;
+  text-align: left;
+}
+
+.question-text {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.answer-btn {
+  background-color: #f0f0f0;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  width: 100%;
+  text-align: left;
+}
+
+.answer-btn:hover {
+  background-color: #e0f7fa;
+}
+
+.answer-btn.correct {
+  background-color: #d4edda;
+  color: #155724;
+  font-weight: bold;
+}
+
+.answer-btn.wrong {
+  background-color: #f8d7da;
+  color: #721c24;
+  font-weight: bold;
+}
+
+/* Résultat */
+.result-block {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: none;
+  text-align: center;
+  border-radius: 12px;
+}
+
+.result-text {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #174A56;
+  margin-bottom: 10px;
+  animation: pop-in 0.5s ease;
+}
+
+@keyframes pop-in {
+  from { opacity: 0; transform: scale(0.9); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.score-message {
+  font-size: 1.2em;
+  margin-top: 10px;
+  color: #174A56;
+}
+
+.share-btn, .restart-btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #3FC1C9;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 1em;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.share-btn:hover, .restart-btn:hover {
+  background-color: #2ea8b2;
+}
+
+.certificate-img {
+  width:400px; 
+  margin-top:10px;
+}
+
+/* FOOTER */
+
+footer {
+  width: 100%;
+  background-color: #d3d3d3;
+  text-align: center;
+  font-size: 1em;
+  font-family: 'Urbanist', serif;
+  color: black;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:0 auto;
+  max-width: 1280px;
+}
+
+footer a {
+  text-decoration: none;
+  color: black;
+}
+
+footer a:hover {
+  font-weight: bold;
+}
+
+footer img {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  border: none;
+}
+
+footer a img {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+footer a:hover img {
+  transform: scale(1.3);
+  filter: brightness(1.2);
+}
+
+footer p {
+  background-color: white;
+  display: inline-block;
+  padding: 8px 16px; 
+  border-radius: 6px;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+}
+
+/* RESPONSIVE */
+
+/* RESPONSIVE VERSION ORDINATEUR (=1280px) */
+
+@media (min-width: 426px) {
+
+  /* Pour cacher l'icone du menu burger */
+  .nav-toggle {
+    display: none !important;
+  }
+
+  .menu-header .hide {
+    display: none !important;
+  }
+
+  .static-map-section .hide {
+    display:none !important;
+  }
+
+  .mobile-tooltip-area {
+    display:none !important;
+  }
+}
+
+/* RESPONSIVE VERSION TABLETTE (=768px) */
+
+@media screen and (max-width: 769px) {
+
+/* BARRE DE NAVIGATION (plus petite qu'ne 1280px) */
+.nav-bar {
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 8px;
+  gap: 8px;
+}
+
+.nav-bar a,
+.nav-bar .dropbtn {
+  padding: 8px 14px;
+  font-size: 18px;
+}
+
+.nav-bar > *:not(:last-child)::after {
+  height: 24px;
+  right: -4px;
+}
+
+.dropdown-content {
+  top: 90%;
+  font-size: 16px;
+  min-width: 150px;
+}
+
+.dropdown-content a {
+  font-size: 16px;
+  padding: 10px;
+}
+
+/* PAGE D'ACCUEIL */
+
+/* On enlève le drapeau */
+
+.hide-img {
+  display:none !important;
+}
+
+/* PAGE SUR LES INCONTOURNABLES */ 
+
+.carousel {
+  margin:20px;
+}
+
+.card {
+  width: 300px;
+}
+
+.nav-button {
+  display: none;
+}
+
+.prev-btn {
+  left: -15px;
+}
+
+.next-btn {
+  right: -15px;
+}
+
+/* PAGE SUR LA FILMOGRAPHIE */
+.highlight {
+  flex-direction: column;
+  text-align: center;
+}
+
+.highlight img {
+  width: 100%;
+  height: auto;
+}
+
+.text-box {
+  width: 100%;
+  padding: 0 10px;
+  font-size: 18px;
+}
+
+.text-box h2 {
+  font-size: 2.2em;
+  margin-top: 15px;
+}
+
+.text-box p {
+  font-size: 14px;
+  padding: 15px;
+}
+
+.locations {
+  flex-direction: column;
+  gap: 15px;
+}
+
+.card-film {
+  flex-direction: column;
+  width: 100%;
+  padding: 15px;
+  align-items: center;
+}
+
+.image-block img {
+  height: auto;
+  width: 100%;
+}
+
+.image-block p {
+  font-size: 2em;
+}
+
+.video-section {
+  padding: 10px;
+  margin: 10px;
+}
+
+.quote {
+  font-size: 18px;
+  padding: 10px;
+}
+
+/* PAGE SUR LE SHOPPING */
+
+.info p {
+  font-size: 14px;
+}
+
+}
+
+/* RESPONSIVE VERSION SMARTPHONE (=425px) */
+
+@media screen and (max-width: 426px) {
+
+/* MENU NAVIGATION QUI DEVIENT BURGER */
+
+.menu-header {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width:100%;
+  padding: 10px 20px;
+  background-color: #174A56;
+  position: relative;
+  z-index: 1001;
+}
+
+/* Bouton burger */
+.nav-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 2rem;
+  color: white;
+  display:block;
+}
+
+/* Icône burger */
+.burger-icon {
+  font-size: 2.2rem;
+  color: white;
+}
+
+nav {
+  margin:0;
+}
+
+.nav-bar {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  background-color: #174A56;
+  color: white;
+  border-radius: 0;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  padding: 20px;
+  gap: 0;
+  z-index: 1000;
+}
+
+.nav-bar.active {
+  display: flex;
+}
+
+.nav-bar > *:not(:last-child) {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.nav-bar a,
+.nav-bar .dropbtn {
+  width: 100%;
+  text-align: center;
+  padding: 15px 20px;
+  font-size: 1.2em;
+  background: none;
+  color: white;
+  border-radius: 0 !important;
+}
+
+.nav-bar a.selected,
+.nav-bar .dropbtn.selected {
+background-color: #3FC1C9;
+color: white !important;
+border-radius:10px;
+}
+
+.active {
+  background-color: #174A56 !important;
+  border-radius: 0 !important;
+}
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.dropdown-content {
+  position: static;
+  background-color: #0c353e;
+  box-shadow: none;
+  display: none;
+  padding: 0;
+  width: 100%;
+}
+
+.dropdown-content a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 12px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 1em;
+  border-radius: 0 !important;
+}
+
+.dropdown.open .dropdown-content {
+  display: block;
+}
+
+/* ACCUEIL */
+
+.static-map-section h2 {
+  font-size: 26px;
+}
+
+.static-map-section p {
+  font-size: 1em;
+}
+
+.static-map-section .hide {
+  margin-bottom: 15px;
+  font-size: 15px;
+
+}
+
+.static-map-section .pulse {
+  display:none !important;
+}
+
+.map-tooltip {
+  display: none; /* désactive les hover sur mobile */
+}
+
+#mobile-tooltip-area {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  max-width: 90%;
+  margin-inline: auto;
+  padding: 5px;
+  text-align: center;
+  display: none;
+  margin-top: 20px;
+}
+
+#mobile-tooltip-area img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+#mobile-tooltip-area h3 {
+  color: #174A56;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+/* PAGE SUR LA FILMOGRAPHIE */
+
+.highlight {
+  flex-direction: column;
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+}
+
+.highlight img {
+  width: 100%;
+  height: auto;
+}
+
+.text-box {
+  width: 100%;
+  padding: 10px 0;
+}
+
+.text-box h2 {
+  font-size: 2em;
+  margin-bottom: 20px;;
+}
+
+.text-box p {
+  font-size: 15px;
+}
+
+.locations {
+  margin:10px;
+}
+
+.card-film {
+  flex-direction: column;
+  gap: 15px;
+  padding: 10px;
+}
+
+.image-block img {
+  height: 310px;
+  width: 100%;
+}
+
+.image-block p {
+  font-size: 2em;
+}
+
+.video-section {
+  padding: 10px;
+  margin: 10px;
+}
+
+.quote {
+  font-size: 16px;
+}
+
+.video-container {
+  width: 100%;
+}
+
+/* PAGE SUR LES INCONTOURNABLES */
+
+.carousel {
+  scroll-snap-type: x mandatory;
+  overflow-x: auto;
+  padding: 10px;
+  gap: 10px;
+  margin:10px;
+  margin-bottom:20px;
+}
+
+.card {
+  width: 100%;
+  min-width: 80vw; /* pour forcer une seule carte visible */
+  scroll-snap-align: center;
+  flex-shrink: 0;
+}
+
+.carousel-container {
+  padding: 0 10px;
+}
+
+.nav-button {
+  display: none; /* On supprime les flèches sur mobile */
+}
+
+.card-header,
+.card-content,
+.card-footer {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.card-title {
+  font-size: 2rem;
+}
+
+.card-subtitle,
+.card-content {
+  font-size: 1rem;
+}
+
+.card-button {
+  font-size: 0.95rem;
+  padding: 0.6rem 1rem;
+}
+
+/* PAGE SUR LES QUARTIERS THÉMATIQUES */
+
+.max-width .hide {
+  display: none !important;
+}
+
+.flashcard-container-quartiers1 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px;
+  max-width: 100%;
+}
+
+.flashcard-quartiers1 {
+  width: 100%;
+  max-width: 100%;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.card-inner-quartiers1 {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+  position: relative;
+}
+
+.flashcard-quartiers1:hover .card-inner-quartiers1 {
+  transform: rotateY(180deg);
+}
+
+.card-front-quartiers1,
+.card-back-quartiers1 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  overflow: hidden;
+}
+
+.card-front-quartiers1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card-front-quartiers1 p {
+  position: absolute;
+  bottom: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  width: 90%;
+  padding: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.card-back-quartiers1 {
+  transform: rotateY(180deg);
+  background-color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: justify;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* PAGE SUR LES QUARTIERS "UNDERGROUND" */
+
+.timeline-line,
+.timeline-point {
+  display: none;
+}
+
+.timeline-entry {
+  width: 100%;
+  left: 0 !important;
+  margin: 10px 0;
+}
+
+.timeline-entry.left,
+.timeline-entry.right {
+  left: 0;
+}
+
+.timeline-entry img {
+  width: 100%;
+  height: 300px;
+}
+
+/* PAGE SUR LES MUSÉES */
+
+.description {
+  text-align: justify;
+}
+
+.modal-content {
+  flex-direction: column;
+  align-items: center;
+  width: 90%;          
+  padding: 15px;
+}
+
+.modal-left,
+.modal-right {
+  padding: 10px 0;
+  width: 100%;
+}
+
+.modal-left img {
+  max-width: 150px;
+}
+
+.modal-right h2 {
+  text-align: center;
+}
+
+/* PAGE SUR LE SHOPPING */
+
+.shopping-section h2 {
+  display : none !important;
+}
+
+.shopping-card {
+  flex-direction: column !important;
+  height: auto;
+}
+
+.shopping-card.reverse {
+  flex-direction: column !important; 
+}
+
+.shopping-card img {
+  width: 100%;
+  height: auto;
+}
+
+.shopping-card .info {
+  padding: 20px;
+  text-align: center;
+}
+
+
+.shopping-card h2 {
+  font-size: 1.4rem;
+}
+
+.shopping-card p {
+  font-size: 1rem;
+  text-align: justify;
+}
+
+.button {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+}
+
+.double-row {
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mini-card {
+  width: 100%;
+}
+
+.mini-card img {
+  height: 300px;
+}
+
+.mini-card h3 {
+  font-size: 1.2rem;
+}
+
+/* PAGE SUR L'AUTOMOBILE */
+
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+  background-attachment: scroll;
+  background-size: cover;
+  background-position: center;
+  min-height: 70vh; 
+  opacity: 1;
+}
+
+.caption {
+  top: 40%; 
+  padding: 0 10px; 
+}
+
+.border {
+  font-size: 1.1rem;
+  padding: 12px;
+}
+
+.absolute {
+  flex-direction: column;
+  padding: 10px;
+}
+
+/* PAGE SUR LE QUIZ */
+.question-content {
+  background-color: #ffffff;
+}
+
+.question-text {
+  text-align: center;
+}
+
+.certificate-img {
+  width: 90%;
+  max-width: 300px;
+}
+
+/* FOOTER */
+
+footer p {
+  font-size: 11px;
+}
+
+}
+
