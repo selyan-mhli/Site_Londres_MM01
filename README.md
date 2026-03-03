@@ -58,17 +58,6 @@ Le site propose une expérience immersive avec une **vidéo de fond en parallax*
 
 ---
 
-## 👥 Équipe
-
-| Nom | Rôle |
-|-----|------|
-| **Selyan MOUHALI** | Développeur web |
-| **Sharleen PINEAU** | Cliente / Cheffe de projet |
-| **Rania SABBAR** | Relectrice |
-| **Ségolène SIEWE MBOULA** | Relectrice |
-
----
-
 ## 📬 Contact
 
 - 📧 [selyan.mouhali@utt.fr](mailto:selyan.mouhali@utt.fr)
