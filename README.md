@@ -15,6 +15,7 @@
 ## 📖 Présentation
 
 **Site Londres MM01** est un site web thématique consacré à la ville de **Londres**, conçu et développé dans le cadre d'un projet pédagogique à l'UTT.  
+
 Il s'adresse à toute personne souhaitant découvrir Londres : sa culture, son urbanisme, son patrimoine et ses incontournables.
 
 Le site propose une expérience immersive avec une **vidéo de fond en parallax**, une **carte interactive** et une navigation claire organisée par thèmes.
